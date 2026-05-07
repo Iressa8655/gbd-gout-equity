@@ -10,6 +10,10 @@
 \usepackage{listings}
 \lstset{breaklines=true}
 
+%% Figure path: works both locally (paper/ → ../figures/) and on Overleaf
+%% (figures/ subfolder at project root, or files at root via ./)
+\graphicspath{{../figures/}{./figures/}{./}}
+
 \begin{document}
 
 %%
@@ -66,7 +70,7 @@ Population ageing produced the single largest incremental gain
 confirmed ageing as the dominant predictor. Obesity added no independent
 explanatory power (R\textsuperscript{2}~=~0.472), reflecting collinearity
 with ageing and wealth. The full five-variable dietary model reached
-R\textsuperscript{2}~=~0.504. Georgia carried the largest unexplained residual
+R\textsuperscript{2}~=~0.508. Georgia carried the largest unexplained residual
 (+56.9 DALY units above prediction), reduced only marginally by full dietary
 adjustment (+51.7), suggesting unmeasured genetic or cultural factors. New
 Zealand, Canada, and Australia formed a secondary outlier cluster (+39 to +41
@@ -138,7 +142,7 @@ analysis confirmed ageing as the dominant predictor across all variables
 (Figure~\ref{fig:shap}). Obesity contributed no independent explanatory power
 (M3: R\textsuperscript{2}~=~0.472), reflecting collinearity with ageing and
 wealth. The full five-variable dietary model (M5) reached
-R\textsuperscript{2}~=~0.504.
+R\textsuperscript{2}~=~0.508.
 
 Georgia carried the largest unexplained residual (+56.9 DALY units), which
 dietary adjustment reduced only marginally (+51.7 after M5), suggesting
@@ -149,7 +153,7 @@ populations~\cite{phippsgreen2010}.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\linewidth]{../figures/fig4_dual_panel.png}
+  \includegraphics[width=\linewidth]{fig4_dual_panel.png}
   \caption{Left: log GDP per capita versus gout DALY rate across 166 countries
     (R\textsuperscript{2}~=~0.386); the five largest positive residuals are labelled.
     Right: top 10 countries by unexplained residual. Georgia (+56.9) is the
@@ -159,7 +163,7 @@ populations~\cite{phippsgreen2010}.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\linewidth]{../figures/fig6_shap.png}
+  \includegraphics[width=\linewidth]{fig6_shap.png}
   \caption{SHAP feature importance for the five-variable model (M5). Values
     are expressed in DALY rate units, enabling direct comparison across
     variables with differing scales. Population ageing is the dominant
